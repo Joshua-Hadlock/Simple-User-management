@@ -1,0 +1,24 @@
+html
+    include head.pug
+    body
+    form(action="/editTheUser", method='POST').userForm
+            input(type='hidden' name="id" value=user.id)
+            div.coolDesign
+                i.fa-solid.fa-hat-cowboy
+                h1= user.name
+            div.formItem
+                label(for='userName') username: 
+                input(id="userName", name='userName',placeholder="username" required value=user.username)
+            div.formItem
+                label(for='email') email: 
+                input(id="email", name='email',placeholder="email" required value=user.email)
+            div.formItem
+                label(for='name') name: 
+                input(id="name", name='name',placeholder="name" required value=user.name)
+            div.formItem
+                label(for='age') age: 
+                input(id="age", name='age',placeholder="age", type='number' required value=user.age)
+            div.formButton
+                button.submit edit
+
+    include navbar.pug

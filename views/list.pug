@@ -1,0 +1,36 @@
+html
+    include head.pug
+    body
+        div.table
+            div.coolDesign
+                i.fa-solid.fa-hat-cowboy
+                div.smallChange
+                    h2 Manage user information
+            table(BORDER=1 CELLSPACING=0)
+                tr
+                th ID
+                th username
+                th email
+                th name
+                th age
+                th edit user
+                th delete user
+                each user in users
+                    tr
+                        th= user.id
+                        th= user.username
+                        th= user.email
+                        th= user.name
+                        th= user.age
+                        th
+                            form(method='post' action='/editUser').center
+                                input(type='hidden' name="id" value=user.id)
+                                button.change.center
+                                    i.fa-solid.fa-gear.icon
+                        th
+                            form(method='post' action='/deleteUser').center
+                                input(type='hidden' name="id" value=user.id)
+                                button.change
+                                    i.fa-solid.fa-trash.icon
+
+        include navbar.pug

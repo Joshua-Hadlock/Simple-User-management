@@ -1,0 +1,20 @@
+form(action="/userData/addUserData", method='POST').userForm
+            div.coolDesign
+                i.fa-solid.fa-hat-cowboy
+                div.smallChange
+                    h3 welcome to:
+                    h2 Info Stealer
+            div.formItem
+                label(for='userName') username: 
+                input(id="userName", name='userName',placeholder="username" required)
+            div.formItem
+                label(for='email') email: 
+                input(id="email", name='email',placeholder="email" type="email" required )
+            div.formItem
+                label(for='name') name: 
+                input(id="name", name='name',placeholder="name" required)
+            div.formItem
+                label(for='age') age: 
+                input(id="age", name='age',placeholder="age", type='number' required)
+            div.formButton
+                button.submit submit
